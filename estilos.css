@@ -148,7 +148,7 @@
       background-color: transparent;
       border-color: rgb(219, 218, 218);
       line-height: 70px; /*le damos separacion a los item del menu vertical*/
-      transition: .5s ease; /*tiempo de animacion al darle click a los item del menu*/
+      transition: .3s ease; /*tiempo de animacion al darle click a los item del menu*/
     }
 
     .menu-i:hover{
