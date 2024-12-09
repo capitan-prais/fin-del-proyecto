@@ -186,6 +186,7 @@
   }
 
   
+  
   #mensajeError {
     width: 300px;
     border-radius: 100px 100px 100px 100px;
@@ -196,7 +197,7 @@
     font-size: 25px;
     color: red;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
   }
   
   #mensajeError.visible {
@@ -263,6 +264,8 @@
     width: 250px;
     height: auto;
   }
+
+
   
   
   
@@ -397,12 +400,12 @@
   }
   
    .imagenpeli {
-  width: 280px;
+  width: 250px;
   
    mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
   position: fixed;
   top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
-  left: 8%; /*nos sirve para mover la imagen de izquierda o derecho*/
+  left: 11%; /*nos sirve para mover la imagen de izquierda o derecho*/
   z-index: -1;
   }
   .contenedor-titulodepelicula{
@@ -568,15 +571,17 @@
         }
   /* Estilo para el botón de cerrar video */
   #closeVideoButton {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px;
+    background-color: red; /* Color de fondo rojo */
+    color: white;           /* Texto blanco */
+    border: none;           /* Eliminar bordes */
+    padding: 10px;     /* Espaciado alrededor del texto */
+    font-size: 24px;        /* Tamaño del texto */
+    border-radius: 5px;     /* Bordes redondeados */
+    cursor: pointer;       /* Cambiar el cursor cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
     position: absolute;
     top: 10px;
     right: 10px;
-    cursor: pointer;
     z-index: 2;
   }
 

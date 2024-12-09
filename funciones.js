@@ -134,6 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!query) {
                 mensajeError.style.display = 'block';
                 mensajeError.classList.add('visible');
+
+                // Ocultar el mensaje de error después de 4 segundos
+                setTimeout(() => {
+                    mensajeError.style.display = 'none';
+                    mensajeError.classList.remove('visible');
+                }, 2500);
+
                 return;
             } else {
                 mensajeError.style.display = 'none';
@@ -177,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000); // Simula tiempo de carga
         }
     });
-    
 });
 
 
