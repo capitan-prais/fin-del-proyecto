@@ -437,7 +437,7 @@
   
   .btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -454,12 +454,12 @@
   }  
   
   .btn-anterior {
-    left: 1px;
-    margin: 0px 10px 0px 0px;
+    left: -10px;
+    /* margin: 0px 10px 0px 0px; */
   }
   
   .btn-siguiente {
-    right: 1px;
+    right: -10px;
   }
   
   .btn:focus {
