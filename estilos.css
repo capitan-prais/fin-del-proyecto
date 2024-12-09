@@ -405,7 +405,7 @@
    mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
   position: fixed;
   top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
-  left: 11%; /*nos sirve para mover la imagen de izquierda o derecho*/
+  left: 12%; /*nos sirve para mover la imagen de izquierda o derecho*/
   z-index: -1;
   }
   .contenedor-titulodepelicula{
