@@ -116,6 +116,7 @@
       margin: 20px auto;
       /* transition: all 10s ease;  */
       z-index: 999999;
+      
     }
   /*aqui modificamos la imagen del menu*/
     .menu-btn img {
@@ -123,6 +124,7 @@
     }
   
     .menu {
+      transition: .7s ease; /*tiempo de ocultarse el menu lateral*/
       width: 40%; /*ancho completo del menu*/
       height: 75%; /*alto completo del menu, no es el alto de cada item del menu*/ 
       padding: 20px;
@@ -161,7 +163,7 @@
   
     .menu.active {
       left: 61%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
-    
+      transition: .7s ease; /*tiempo de aparecer el menu lateral*/
     }
   
   }
