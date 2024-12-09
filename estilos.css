@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    /* background: #333; */
+  }
+  
+  body {
+    color: #fff;
+    background-image: url(imagenes/peliculas.jpg); 
+  }
+
+  .espacio {
+    width: 100%; /*ancho*/
+    height: 90px; /*alto*/
+  }
+ 
+  
+  /*empezamos a editar el menu parte superior....//////////////////////////////////////*/
+  nav.menuprincipal {
+    width: 100%; /*ancho*/
+    height: 70px; /*alto*/
+    border: 0;
+    padding: 0px;
+    align-items: center;
+    background: linear-gradient(to right, #061161, #780206);
+    box-shadow: 50px 60px 17px -14px rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    /*float: left;*/
+    /*  background: #780206;
+    background: -webkit-linear-gradient(to right, #061161, #780206);*/
+    /*padding: 0 3%; */
+    position: fixed; /*este lo ocupamos para que el menu quede fijo*/
+    z-index: 9999;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
+  }
+
+   /*aqui editamos como queremos que sea el scroll al apretar el tipo de pelicula en el menu*/
+  
+   html{
+    scroll-behavior: smooth;
+  }
+  
+  /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
+     
+  .menu {
+    width: 70%; /*ancho*/
+    height: 100px; /*alto*/
+    display: flex; /*PARA DEJAR UNO DEBAJO DE OTRO*/
+    align-items: center;
+    text-align: center;
+    /*position: relative;*/
+    list-style-type: none; /* Quita los puntos del principio*/
+  }
+  
+  
+  .menu-i {
+    width: 100px; /*ancho*/
+    height: 40px; /*alto*/
+    font-size: 14px;
+    border-radius: 2em;
+    border-width: 2px;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(219, 218, 218);
+    border-style: solid;
+    background-color: transparent;
+    border-color: rgb(219, 218, 218);
+    line-height: 35px; /*subimos o bajamos la letra*/
+    transition: 0.2s ease;
+    /* font-weight: 500; */
+    /* text-transform: uppercase; */
+    /* letter-spacing: 2px; */
+    text-decoration: none; /* Quita el subrayado */
+  }
+  
+  /*cumple estos estilos al pasar el mause por encima o los deja fijo al pasarlos a pantalla de celular*/
+  .menu-i:hover {
+    width: 130px; /*ancho*/
+    height: 50px; /*alto*/
+    font-size: 20px;
+    text-align: center;
+    color: rgb(247, 247, 247);
+    background-color: rgb(0, 81, 255);
+    border-color: rgb(0, 81, 255);
+    text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
+    box-shadow: 0 0 50px rgb(0, 81, 255), 0 0 30px rgb(0, 81, 255),
+      0 0 60px rgb(0, 81, 255), 0 0 120px rgb(0, 81, 255);
+    letter-spacing: 3px;
+  }
+  
+  /*cumple estos estilos al precionar*/
+  .menu-i:active {
+    width: 115px; /*ancho*/
+    height: 38px; /*alto*/
+    letter-spacing: 0px; 
+  }
+  
+  .menu-btn {
+    font-size: 50px;
+    cursor: pointer;
+    display: none; 
+  }
+  
+  /*Aqui empezamos a editar el menu lateral..../////////////////////////////////////////*/
+  
+  @media screen and (max-width: 1150px) {
+    /*aqui modificamos el contenedor del logo del menu*/
+    .menu-btn {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: 20px auto;
+      /* transition: all 10s ease;  */
+      z-index: 999999;
+    }
+  /*aqui modificamos la imagen del menu*/
+    .menu-btn img {
+      filter: drop-shadow(1px 1px 10px  #fff);
+    }
+  
+    .menu {
+      width: 40%; /*ancho completo del menu*/
+      height: 75%; /*alto completo del menu, no es el alto de cada item del menu*/ 
+      padding: 20px;
+      z-index: 9999; /*para dejarlo encima de todo*/
+      position: fixed; /*lo hacemos mas manipulable moviendolo donde nosotros queramos top, right, bottom y left*/
+      top: 60px; /*subimos o bajamos el menu lateral*/
+      left: 100%; /*para pocisionar el menu al lado derecho (fuera de pantalla para que no se vea)*/
+      background: #780206;
+      background: -webkit-linear-gradient(to right, #061161, #780206);
+      background: linear-gradient(to right, #061161, #780206);
+      flex-direction: column; /*lo ocupamos para que los botones de menu aparescan de forma vertical*/
+    }
+
+  
+  
+    /*separacion entre botnes del menu*/
+    .menu-i{
+      padding: 9px;
+      font-size: 22px;
+      align-items: center;
+      color: rgb(219, 218, 218);
+      border-style: solid;
+      background-color: transparent;
+      border-color: rgb(219, 218, 218);
+      line-height: 70px; /*le damos separacion a los item del menu vertical*/
+      transition: .5s ease; /*tiempo de animacion al darle click a los item del menu*/
+    }
+
+    .menu-i:hover{
+      font-size: 22px;
+    }
+
+    .menu-i:active {
+      font-size: 40px;
+    }
+  
+    .menu.active {
+      left: 61%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
+    
+    }
+  
+  }
+  
+  /*aqui modificamos los estilos del buscador */
+  
+  
+  .buscador-container {
+    width: 300px;
+    margin: 20px 5px 20px 37px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* position: relative; */
+  }
+  
+  #buscador {
+    font-size: 23px;
+    padding: 6px 10px 6px 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  
+  #mensajeError {
+    width: 300px;
+    border-radius: 100px 100px 100px 100px;
+    background: #000;
+    position: fixed; /*lo ocupamos para que se quede fijo*/
+    z-index: 1; /*esto lo ocupamos para que este por encima del resto*/
+    margin-top: 10px;
+    font-size: 25px;
+    color: red;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #mensajeError.visible {
+    opacity: 1;
+  }
+  
+  #sugerencias {
+
+    color: beige;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: auto;
+    border: 10px solid #000;
+    border-radius: 5px;
+    /* max-height: 150px; */
+    overflow-y: auto;
+    display: none;
+    background: #121212;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .sugerencias li {
+    padding: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    border: 10px solid #780206;
+    text-decoration: none; /* Quita el subrayado */
+  }
+
+  
+  /* le damos estilo al mensaje de buscando cuando carga al buscar la pelicula */
+  #spinner {
+    width: 230px;
+    background: #fff;
+    border-radius: 100px 100px 0px 100px;
+    margin: 0px 50px 0px 50px;
+    font-size: 30px;
+    color: #007bff;
+    display: none;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .no-results {
+    position: fixed;
+    font-size: 30px;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculto inicialmente */
+  }
+  
+  .no-results img {
+    margin-top: 10px;
+    width: 250px;
+    height: auto;
+  }
+  
+  
+  
+  /*aqui estilamos el carrusel//////////////////////////////////////*/
+  
+  .hero {
+    margin: 0px 0px 55px 0px;
+    width: 100%; /*ancho*/
+    height: 620px; /*alto*/
+    position: relative; /*pone todo lo que esta dentro una encima de la otra*/
+    scroll-margin-top: 100px; /*este lo ocupamos para mover el contenido al apretar donde queremos ir, al apretar cualquier tipo de pelicula enlos botones del menu en la parte de arriba*/
+  }
+  
+  /*esto lo ocupamos para que cuando al tocar un boton del menu nos dirija aal contenido y lo deje donde queremos de forma vertical */
+  @media screen and (max-width: 1150px){
+    .hero {
+      scroll-margin-top: 85px;
+    }
+  }
+  
+  /*aqui estilamos el scroll de la pagina vertical en este caso editaremos (.todo) hay estaran 3 codigos de animacion en la parte inferior*/
+  
+  @keyframes scroll {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  
+  /*aqui encontramos todo lo que esta dentro del lado plomo del carrusel*/
+  
+  .todo {
+    width: 90%;
+    height: 530px;
+    /* padding: 0px auto; */
+    margin: 0px auto;
+    /* text-align: center;  */
+    border-radius: 20px;
+    background: #161f26db;
+    box-shadow: inset 0px -20px 19px -5px rgba(0,0,0,1); /*pone sombra interna en la parte de abajo*/
+    /* max-width: 90%; */
+    /*margin: auto;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*border: solid red; */
+    /* background: #000; */
+  
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+  }
+  
+  @media screen and (max-width: 1150px){
+    .todo {
+      height: 100%;
+      margin: 0px auto;
+    }
+  }
+  
+  .titulo {
+    width: 25%; /*ancho*/
+    padding: 20px 0px 0px 0px; /*pone un espacio alrededor de lo que pusistes dentro*/
+    margin: 0px auto; /*pone un espacio por fuera o modificas en donde quieres que este ubicado el titulo como en este caso*/
+    font-size: 60px; /*tamaño de letra*/
+    text-align: center; /*centra el texto*/
+    font-family: 'DRagonlord'; /*estilo de letra*/
+    color: #fff; /*color de texto*/
+    justify-content: center;
+    /* min-height: 10px; */
+    /* background: #161f26db; */
+    /*height: px;*/
+    /*margin-bottom: 40px;*/
+    /*border: solid red;*/
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: #000;
+    border-radius: 80px 0px 80px 0px;
+    box-shadow: 0px 10px 16px -10px #fff;
+  }
+  
+  @media screen and (max-width: 1150px){
+    .titulo{
+      width: 80%;
+      height: 10%;
+      font-size: 50px; /*tamaño de letra*/
+      padding: 8px 0px 0px 0px;
+    }
+  }
+  
+  
+  
+  .carousel-container {
+    position: relative;
+    width: 90%;
+    height: 570px;
+    margin: 0px auto;
+    /* overflow: hidden; */
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    /* min-height: 100%; */
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    /* max-width: 100%; */
+    height: 535px;
+  }
+
+  
+  /*agrandar la imagen y que se posicione en el centro*/
+  .carousel .carousel-item img:active{
+    transform: scale(1.1); 
+   }
+
+   @media screen and (max-width: 1150px){
+    .carousel .carousel-item img:active{
+      transform: none; 
+    }
+  }
+  
+   .imagenpeli {
+  width: 280px;
+  
+   mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
+  position: fixed;
+  top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
+  left: 8%; /*nos sirve para mover la imagen de izquierda o derecho*/
+  z-index: -1;
+  }
+  .contenedor-titulodepelicula{
+    width: 330px;
+    height: 100px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(350%); /* nos sirve para subir o bajar en contenido*/
+    border-radius: 100px 100px;
+    background: rgba(0, 0, 0, 0.4);
+    
+  }
+
+
+  .titulodepelicula { 
+    margin: 0;
+    padding: 0;
+    font-size: 30px; /*tamaño de letra*/
+    line-height: 1.5; /*separacion entre lineas*/
+    max-width: 600px; /* Evita texto muy ancho */
+    text-transform: uppercase; /* estilo de letra */
+    letter-spacing: 10px; /*espacio entre letra*/
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px #000, 7px 7px 0px #000;
+  }
+  
+  
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .btn:active {
+    font-size: 1.5rem;
+    background-color: #26a69a;
+  }  
+  
+  .btn-anterior {
+    left: 1px;
+    margin: 0px 10px 0px 0px;
+  }
+  
+  .btn-siguiente {
+    right: 1px;
+  }
+  
+  .btn:focus {
+    outline: false;
+  }
+  
+  /* Indicadores */
+  .indicators {
+    position: absolute;
+    bottom: 10px;
+    top: 94%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /*separacion entre puntos*/
+    z-index: 1;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: blue;
+  }
+  
+  
+  /* aqui modificamos el boton que nos dirige hacia arriba */
+  
+  
+  .n img{
+    width: 65px;
+    height: 65px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    /* background: #000; */
+    filter: drop-shadow(1px 1px 10px  #fff);
+  }
+  
+  .n img:active{
+    width: 55px;
+    height: 55px;
+    box-shadow: none;
+    /* background: none; */
+  }
+  
+  .highlight {
+    border: 2px solid yellow;
+    box-shadow: 0 0 10px yellow;
+    transition: all 0.3s ease;
+  }
+   
+  .footer {
+    font-size: 20px;
+    width: 100%; /*ancho*/
+    padding: 13px 0; 
+    text-align: center;
+    color: #fff;
+    background: #000;
+    /*overflow: hidden;*/
+    /*float: left;*/
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+   /* aqui da damos estilos a los video */
+          #playImage {
+            cursor: pointer;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;  /* Espacio entre la imagen y el video */
+        }
+  
+        /* Contenedor del video: centrado con flexbox */
+        #videoContainer {
+            display: none;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+            text-align: center;
+            position: fixed; /* Asegura que se ubique por encima del contenido */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centrado exacto */
+            z-index: 10; /* Mayor que el carrusel */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para el video */
+            padding: 10px;
+            border-radius: 10px;
+        }
+  
+        #video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+  /* Estilo para el botón de cerrar video */
+  #closeVideoButton {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  #feedback {
+    display: none; /* Ocultar hasta que termine la película */
+    text-align: center;
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.like {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.dislike {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

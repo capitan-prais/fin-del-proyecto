@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRANG 2</title>
+    <link rel="stylesheet" href="estilos.css">
+	<!-- poner sonido al pasar el mouse en el menu-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="menuprincipal" aria-label="Menú principal">	
+			<div class="buscador-container">
+				<input type="text" id="buscador" placeholder="Buscar película..." />
+				<p id="mensajeError">Escriba la película que está buscando, por favor¡</p>
+				<ul id="sugerencias" class="sugerencias"></ul>
+				<div id="spinner">🔄 Buscando...</div>
+			</div>
+			<div id="no-results" class="no-results hidden"></div>
+			
+			<div class="menu-btn">
+				<img class="menu-icon" src="imagenes/menu.png" alt="">
+			</div>
+
+			<ul class="menu">
+				<li><a href="#Estrenos" class="menu-i">Estrenos</a></li>	
+				<li><a href="#Acción" class="menu-i">Acción</a></li>	
+				<li><a href="#Románticas" class="menu-i">Románticas</a></li>
+				<li><a href="#Tristes" class="menu-i">Tristes</a></li>
+				<li><a href="#Anime" class="menu-i">Anime</a></li>	
+				<li><a href="#Chistosas" class="menu-i">Chistosas</a></li>
+				<li><a href="#Motivación" class="menu-i">Motivación</a></li>
+				<li><a href="#Terror" class="menu-i">Terror</a></li>
+			</ul>
+		</nav>	
+	</header>
+
+
+
+	<div class="espacio"></div>
+
+
+
+  <div class="hero" id="Estrenos">
+    <div class="todo">
+        <h1 class="titulo">Estrenos</h1>
+        <div class="carousel-container">
+            <div id="carousel" class="carousel">
+                <div class="carousel-item">
+                    <img class="imagenpeli" src="imagenes/black-adam.png" alt="Imagen 1" data-video="video1.mp4">
+					<div class="contenedor-titulodepelicula">
+						<p class="titulodepelicula">Black Adam</p>
+					</div>
+				</div>
+                <div class="carousel-item">
+					<img class="imagenpeli" src="imagenes/thor.png" alt="Imagen 2" data-video="video1.mp4">
+					<div class="contenedor-titulodepelicula">
+						<p class="titulodepelicula">Thor: amor y trueno</p>
+					</div>
+                </div>
+                <div class="carousel-item">
+					<img class="imagenpeli" src="imagenes/SHAZAM.png" alt="Imagen 3" data-video="video1.mp4">
+					<div class="contenedor-titulodepelicula">
+						<p class="titulodepelicula">Shazam</p>
+					</div>
+                </div>
+                <div class="carousel-item">
+					<img class="imagenpeli" src="imagenes/Lightyear.png" alt="Imagen 4" data-video="video1.mp4">
+					<div class="contenedor-titulodepelicula">
+						<p class="titulodepelicula">Lightyear</p>
+					</div>
+                </div>
+                <div class="carousel-item">
+					<img class="imagenpeli" src="imagenes/Uncharted.png" alt="Imagen 5" data-video="video1.mp4">
+					<div class="contenedor-titulodepelicula">
+						<p class="titulodepelicula">Uncharted</p>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="hero" id="Acción">
+	<div class="todo">
+		<h1 class="titulo">Acción</h1>
+		<div class="carousel-container">
+					<div id="carousel" class="carousel">
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/redy.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">comienza el juego</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/laguerrradelmañana.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">La Guerra Del Mañana</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/alita.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Alita: Battle Angel</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/LALIGA.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">La Liga De La Justicia</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/VENOM1.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Venom</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/LAMOMIA.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">La Momia</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/vengadores.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Los Vengadores</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/CHAPPIE.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Chappie</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/interestelar.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Interestelar</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/JhonWick.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">John Wick</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Runner.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Runer</p>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/TomandoElControl.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Tomando El Control</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Upgrade.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Upgrade</p>
+							</div>
+						</div>
+						
+					</div>
+		</div>	
+	</div>		
+</div>
+
+
+<div class="hero" id="Románticas">
+	<div class="todo">
+		<h1 class="titulo center-align " >Románticas</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/your.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Your Name</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/quiereme.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Quiereme si te atrevez</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/caido.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Como caido del cielo</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/ActualizacionDeEstado.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Actualizacion De Estado</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/ADosMetrosDeTi.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">A dos metros de ti</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/AMiAltura.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">A mi altura</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/MiPrimerBeso.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Mi Primer Beso</p>
+							</div>
+						</div>
+					</div>
+		</div>	
+	</div>		
+</div>
+
+<div class="hero" id="Tristes">
+	<div class="todo">
+		<h1 class="titulo center-align ">Tristes</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Clouds.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Clouds</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/LaRazonDeEstarContigo.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">La Razon De Estar Contigo</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/MiAmigoEnzo.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Mi Amigo Enzo</p>
+							</div>
+						</div>
+						
+					</div>
+		</div>
+	</div>		
+</div>
+
+<div class="hero" id="Anime">
+	<div class="todo">
+		<h1 class="titulo center-align ">Anime</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Luca.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Luca</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Raya.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Raya</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/Vivo.webp" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">vivo</p>
+							</div>
+						</div>
+					</div>
+		</div>
+	</div>		
+</div>
+
+<div class="hero" id="Chistosas">
+	<div class="todo">
+		<h1 class="titulo center-align ">Chistosas</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/CriticaNocheLoca.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Critica Noche Loca</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/MiAbueloEsUnPeligro.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">Mi Abuelo Es Un Peligro</p>
+							</div>
+						</div>
+					</div>
+		</div>	
+	</div>		
+</div>
+
+<div class="hero" id="Motivación">
+	<div class="todo">
+		<h1 class="titulo center-align ">Motivación</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/ElGranShowman.png" alt="" data-video="video1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">El Gran Showman</p>
+							</div>
+						</div>
+					</div>
+		</div>	
+	</div>
+</div>
+
+<div class="hero" id="Terror">
+	<div class="todo">
+		<h1 class="titulo center-align ">Terror</h1>	
+		<div class="carousel-container">
+					<div class="carousel">
+						<div class="carousel-item">
+							<img class="imagenpeli" src="imagenes/grave counters 1.png" alt="" data-video="Grave Conunter 1.mp4">
+							<div class="contenedor-titulodepelicula">
+								<p class="titulodepelicula">grave counters 1</p>
+							</div>
+						</div>
+					</div>
+		</div>	
+	</div>
+</div>
+
+<!-- agregamos formato video  -->
+
+<div id="videoContainer">
+    <button id="closeVideoButton">X</button>
+    <video id="video" controls>
+        <source id="videoSource" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
+	<!-- agregamos boton de like o dislike al terminar la pelicula -->
+    <div id="feedback" style="display: none; text-align: center; margin-top: 20px;">
+        <p>¿Te gustó el video?</p>
+        <button class="like">👍 Me gusta</button>
+        <button class="dislike">👎 No me gusta</button>
+    </div>
+</div>
+
+
+
+
+<!-- pie de pagina -->
+<div class="footer">
+	<footer> <!-- pie de pagina -->
+			<p>Luis Cerna 2022 - Todos los derechos reservados</p>
+	</footer>
+</div>
+
+<!-- boton de arriba -->
+
+<div class="n">
+	<a class="arriba" href="#">
+		<img class="arribai" alt="Ir arriba" border="0" src="imagenes/boton arriba.png"/>
+	</a> 
+</div>
+
+<script src="funciones.js"></script>
+
+<!-- audio de menu lo ejecuta JQUERY, en el codigo de la perte superior para apretar el boton de menu -->
+
+<audio src="audio/sonido-z.mp3" preload></audio>
+<audio src="audio/sonido-menu.mp3" preload></audio>
+<audio src="audio/sonido-enter.mp3" preload></audio>
+<audio src="audio/sonido-fondo.mp3" preload></audio>
+<audio src="audio/sonido-buscar.mp3" preload></audio>
+<audio src="audio/sonido-enter.mp3 " preload></audio>
+<audio src="audio/arriba.mp3" preload></audio>
+
+</body>
+</html>
