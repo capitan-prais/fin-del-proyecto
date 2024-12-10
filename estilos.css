@@ -35,7 +35,7 @@
     background: -webkit-linear-gradient(to right, #061161, #780206);*/
     /*padding: 0 3%; */
     position: fixed; /*este lo ocupamos para que el menu quede fijo*/
-    z-index: 9999;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
+    z-index: 9;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
   }
 
    /*aqui editamos como queremos que sea el scroll al apretar el tipo de pelicula en el menu*/
@@ -54,6 +54,7 @@
     text-align: center;
     /*position: relative;*/
     list-style-type: none; /* Quita los puntos del principio*/
+    /* z-index: -9999; */
   }
   
   
@@ -75,6 +76,7 @@
     /* text-transform: uppercase; */
     /* letter-spacing: 2px; */
     text-decoration: none; /* Quita el subrayado */
+    /* z-index: -1; */
   }
   
   /*cumple estos estilos al pasar el mause por encima o los deja fijo al pasarlos a pantalla de celular*/
@@ -90,6 +92,7 @@
     box-shadow: 0 0 50px rgb(0, 81, 255), 0 0 30px rgb(0, 81, 255),
       0 0 60px rgb(0, 81, 255), 0 0 120px rgb(0, 81, 255);
     letter-spacing: 3px;
+    /* z-index: -10; */
   }
   
   /*cumple estos estilos al precionar*/
@@ -97,6 +100,7 @@
     width: 115px; /*ancho*/
     height: 38px; /*alto*/
     letter-spacing: 0px; 
+    /* z-index: -1; */
   }
   
   .menu-btn {
@@ -115,7 +119,7 @@
       display: block;
       margin: 20px auto;
       /* transition: all 10s ease;  */
-      z-index: 999999;
+      z-index: 9;
       
     }
   /*aqui modificamos la imagen del menu*/
@@ -128,9 +132,8 @@
       width: 40%; /*ancho completo del menu*/
       height: 75%; /*alto completo del menu, no es el alto de cada item del menu*/ 
       padding: 20px;
-      z-index: 9999; /*para dejarlo encima de todo*/
       position: fixed; /*lo hacemos mas manipulable moviendolo donde nosotros queramos top, right, bottom y left*/
-      top: 60px; /*subimos o bajamos el menu lateral*/
+      top: 69px; /*subimos o bajamos el menu lateral*/
       left: 100%; /*para pocisionar el menu al lado derecho (fuera de pantalla para que no se vea)*/
       background: #780206;
       background: -webkit-linear-gradient(to right, #061161, #780206);
@@ -142,6 +145,7 @@
   
     /*separacion entre botnes del menu*/
     .menu-i{
+      /* z-index: -1; */
       padding: 9px;
       font-size: 22px;
       align-items: center;
@@ -159,11 +163,13 @@
 
     .menu-i:active {
       font-size: 40px;
+      /* z-index: -1; */
     }
   
-    .menu.active {
+    ul.menu.active {
       left: 61%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
       transition: .7s ease; /*tiempo de aparecer el menu lateral*/
+      /* z-index: -10; */
     }
   
   }
@@ -333,7 +339,7 @@
   
   .titulo {
     width: 25%; /*ancho*/
-    padding: 20px 0px 0px 0px; /*pone un espacio alrededor de lo que pusistes dentro*/
+
     margin: 0px auto; /*pone un espacio por fuera o modificas en donde quieres que este ubicado el titulo como en este caso*/
     font-size: 60px; /*tamaño de letra*/
     text-align: center; /*centra el texto*/
@@ -357,7 +363,7 @@
       width: 80%;
       height: 10%;
       font-size: 50px; /*tamaño de letra*/
-      padding: 8px 0px 0px 0px;
+      /* padding: 8px 0px 0px 0px; */
     }
   }
   
@@ -472,7 +478,7 @@
   .indicators {
     position: absolute;
     bottom: 10px;
-    top: 94%;
+    top: 90%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
