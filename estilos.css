@@ -444,20 +444,22 @@
   
   
   .btn {
+    width: 45px;
     position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 35%;
+    background-color: #007bff;
     border: none;
     color: white;
     font-size: 2rem;
     padding: 10px;
     cursor: pointer;
+    border-radius: 10px;
     z-index: 1;
   }
   
   .btn:active {
-    font-size: 1.5rem;
+    transform: scale(1.1); 
+
     background-color: #26a69a;
   }  
   
