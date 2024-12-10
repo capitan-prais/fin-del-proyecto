@@ -410,7 +410,7 @@
    .imagenpeli {
   width: 250px;
   
-   mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
+  mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
   position: fixed;
   top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
   left: 12%; /*nos sirve para mover la imagen de izquierda o derecho*/
@@ -419,7 +419,7 @@
   .contenedor-titulodepelicula{
     width: 330px;
     height: 100px;
-    margin: 10px auto;
+    margin: 10px 10px 10px -15px;
     display: flex;
     justify-content: center;
     align-items: center;
