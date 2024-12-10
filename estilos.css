@@ -310,7 +310,7 @@
   /*aqui encontramos todo lo que esta dentro del lado plomo del carrusel*/
   
   .todo {
-    width: 90%;
+    width: 85%;
     height: 530px;
     /* padding: 0px auto; */
     margin: 0px auto;
@@ -413,13 +413,13 @@
   mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
   position: fixed;
   top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
-  left: 12%; /*nos sirve para mover la imagen de izquierda o derecho*/
+  left: 6%; /*nos sirve para mover la imagen de izquierda o derecho*/
   z-index: -1;
   }
   .contenedor-titulodepelicula{
     width: 330px;
     height: 100px;
-    margin: 10px 10px 10px -15px;
+    margin: 10px 10px 10px -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -446,7 +446,7 @@
   .btn {
     width: 45px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     background-color: #007bff;
     border: none;
     color: white;
@@ -464,12 +464,12 @@
   }  
   
   .btn-anterior {
-    left: -10px;
+    left: -40px;
     /* margin: 0px 10px 0px 0px; */
   }
   
   .btn-siguiente {
-    right: -10px;
+    right: -40px;
   }
   
   .btn:focus {
