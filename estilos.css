@@ -388,9 +388,8 @@
    .imagenpeli {
   width: 280px;
   position: relative;
-  mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
 margin: 0px auto;
-top: 10px;
+top: 20px;
 
   }
 
