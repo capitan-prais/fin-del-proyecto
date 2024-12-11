@@ -397,10 +397,11 @@ top: 20px;
     justify-content: center;
     position: relative;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     top: -225px;
     border-radius: 100px 100px;
     background: rgba(0, 0, 0, 0.4);
+    display: inline-block;  /* El contenedor se ajusta al tamaño del contenido */
   }
 
 
@@ -414,7 +415,7 @@ top: 20px;
     text-transform: uppercase; /* estilo de letra */
     letter-spacing: 10px; /*espacio entre letra*/
     text-shadow: 3px 3px 0px #000, 5px 5px 0px #000, 7px 7px 0px #000;
-    position: relative;
+    /* position: relative; */
   }
   
   
