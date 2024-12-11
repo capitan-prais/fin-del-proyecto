@@ -378,7 +378,7 @@
     position: relative;
   }
   
-  .carousel-item img {
+  .carousel-container .carousel .carousel-item img {
     height: 535px;
     mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
     filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%)); /*pone sombra blanca al imagen y solo se ve si llamamos el contenedor de la imagen, no se ve si lo coloco directo en la imagen, o no se ve en chrome*/
@@ -429,7 +429,7 @@ top: 10px;
   .btn {
     width: 45px;
     position: absolute;
-    top: 40%;
+    top: 70%;
     background-color: #007bff;
     border: none;
     color: white;
