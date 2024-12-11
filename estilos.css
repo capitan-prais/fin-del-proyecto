@@ -8,33 +8,30 @@
   }
   
   body {
+    margin-top: 90px; /*para que tenga un margen en la parte superior y asi ocupar el lugar del menuprincipal*/
     color: #fff;
     background-image: url(imagenes/peliculas.jpg); 
-  }
-
-  .espacio {
-    width: 100%; /*ancho*/
-    height: 90px; /*alto*/
   }
  
   
   /*empezamos a editar el menu parte superior....//////////////////////////////////////*/
-  nav.menuprincipal {
+  .menuprincipal {
     width: 100%; /*ancho*/
     height: 70px; /*alto*/
     border: 0;
     padding: 0px;
-    align-items: center;
+    align-items: center; /*centra el contenido en el comntenedor padre*/
     background: linear-gradient(to right, #061161, #780206);
     box-shadow: 50px 60px 17px -14px rgba(0,0,0,0.45);
-    display: flex;
-    justify-content: space-between;
+    display: flex; /*sirve para poner el contenido uno al lado del otro */
+    justify-content: space-between; /*lo ocupamos para dar un espaciado externo igual a cada cuadrado. y hay mas opciones de space- ...*/
     /* text-align: center; */
     /*float: left;*/
     /*  background: #780206;
     background: -webkit-linear-gradient(to right, #061161, #780206);*/
     /*padding: 0 3%; */
-    position: fixed; /*este lo ocupamos para que el menu quede fijo*/
+    top: 0px; /*es para que empiece de lo mas alto*/
+    position: fixed; /*este lo ocupamos para que el menu quede fijo en la parte de arriba y al hacer scroll.*/
     z-index: 9;/*esto lo ocupamos para poner el menu por encima de todo el resto al bajar*/
   }
 
@@ -49,12 +46,11 @@
   .menu {
     width: 70%; /*ancho*/
     height: 100px; /*alto*/
-    display: flex; /*PARA DEJAR UNO DEBAJO DE OTRO*/
-    align-items: center;
+    align-items: center; /*centra el contenido en el comntenedor*/
     text-align: center;
-    /*position: relative;*/
+    display: flex; /*sirve para poner el contenido uno al lado del otro */
+    justify-content: space-around; /*lo ocupamos para dar un espaciado igual a cada cuadrado interno. y hay mas opciones de space- ...*/
     list-style-type: none; /* Quita los puntos del principio*/
-    /* z-index: -9999; */
   }
   
   
@@ -283,7 +279,6 @@
     margin: 0px 0px 55px 0px;
     width: 100%; /*ancho*/
     height: 620px; /*alto*/
-    position: relative; /*pone todo lo que esta dentro una encima de la otra*/
     scroll-margin-top: 100px; /*este lo ocupamos para mover el contenido al apretar donde queremos ir, al apretar cualquier tipo de pelicula enlos botones del menu en la parte de arriba*/
   }
   
@@ -313,18 +308,12 @@
     width: 85%;
     height: 530px;
     /* padding: 0px auto; */
-    margin: 0px auto;
+    margin: 0px auto; /*para dejar el contenedor todo en el centro horizontal de hero*/
     /* text-align: center;  */
     border-radius: 20px;
     background: #161f26db;
     box-shadow: inset 0px -20px 19px -5px rgba(0,0,0,1); /*pone sombra interna en la parte de abajo*/
-    /* max-width: 90%; */
-    /*margin: auto;*/
-    /*overflow: hidden;*/
-    /*position: absolute;*/
-    /*border: solid red; */
-    /* background: #000; */
-  
+    position: relative;
     animation: scroll linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
@@ -339,23 +328,15 @@
   
   .titulo {
     width: 25%; /*ancho*/
-
     margin: 0px auto; /*pone un espacio por fuera o modificas en donde quieres que este ubicado el titulo como en este caso*/
     font-size: 60px; /*tamaño de letra*/
     text-align: center; /*centra el texto*/
     font-family: 'DRagonlord'; /*estilo de letra*/
     color: #fff; /*color de texto*/
-    justify-content: center;
-    /* min-height: 10px; */
-    /* background: #161f26db; */
-    /*height: px;*/
-    /*margin-bottom: 40px;*/
-    /*border: solid red;*/
-    /* align-items: center; */
-    /* justify-content: center; */
     background: #000;
     border-radius: 80px 0px 80px 0px;
     box-shadow: 0px 10px 16px -10px #fff;
+    position: relative;
   }
   
   @media screen and (max-width: 1150px){
@@ -371,7 +352,7 @@
   
   .carousel-container {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 570px;
     margin: 0px auto;
     /* overflow: hidden; */
@@ -381,6 +362,7 @@
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform;
+    position: relative;
   }
   
   .carousel-item {
@@ -388,58 +370,52 @@
     /* min-height: 100%; */
     box-sizing: border-box;
     text-align: center;
+    position: relative;
   }
   
   .carousel-item img {
-    /* max-width: 100%; */
     height: 535px;
   }
 
   
   /*agrandar la imagen y que se posicione en el centro*/
-  .carousel .carousel-item img:active{
+  /* .carousel .carousel-item img:active{
     transform: scale(1.1); 
-   }
+   } */
 
-   @media screen and (max-width: 1150px){
-    .carousel .carousel-item img:active{
-      transform: none; 
-    }
-  }
+  
   
    .imagenpeli {
-  width: 250px;
-  
+  width: 280px;
+  position: relative;
   mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
-  position: fixed;
-  top: 17%; /*nos sirve para mover la imagen ariiba o abajo, mientras menos% sube */
-  left: 12%; /*nos sirve para mover la imagen de izquierda o derecho*/
-  z-index: -1;
+margin: 0px auto;
+filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
+top: 10px;
   }
-  .contenedor-titulodepelicula{
-    width: 330px;
-    height: 100px;
-    margin: 10px 10px 10px -8px;
-    display: flex;
+
+ .contenedor-titulodepelicula{
     justify-content: center;
+    position: relative;
     align-items: center;
-    text-align: center;
-    transform: translateY(350%); /* nos sirve para subir o bajar en contenido*/
+    padding: 5px;
+    top: -200px;
     border-radius: 100px 100px;
     background: rgba(0, 0, 0, 0.4);
-    
   }
 
 
   .titulodepelicula { 
     margin: 0;
     padding: 0;
+    align-items: center;
+    text-align: center;
     font-size: 30px; /*tamaño de letra*/
     line-height: 1.5; /*separacion entre lineas*/
-    max-width: 600px; /* Evita texto muy ancho */
     text-transform: uppercase; /* estilo de letra */
     letter-spacing: 10px; /*espacio entre letra*/
     text-shadow: 3px 3px 0px #000, 5px 5px 0px #000, 7px 7px 0px #000;
+    position: relative;
   }
   
   
@@ -464,12 +440,12 @@
   }  
   
   .btn-anterior {
-    left: -40px;
+    left: -20px;
     /* margin: 0px 10px 0px 0px; */
   }
   
   .btn-siguiente {
-    right: -40px;
+    right: -20px;
   }
   
   .btn:focus {
