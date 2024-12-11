@@ -161,8 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             items.forEach((itm) => itm.style.display = 'none'); // Ocultar todos los elementos
                             item.style.display = 'block'; // Mostrar el elemento encontrado
 
-                            const carouselContainer = carousel.closest('.carousel-container');
-                            carouselContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            // Desplazar la vista al contenedor de resultados con un ajuste
+                            const carouselContainer = carousel.closest('.hero');
+
+                            carouselContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            carouselContainer.style.marginTop = '20px'; // Ajuste dinámico de margen
 
                             found = true;
                         }
@@ -186,6 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// aqui editamos el video ////////////////////////////
 
 // Seleccionar todas las imágenes de todos los carruseles
 const images = document.querySelectorAll('.carousel img');
