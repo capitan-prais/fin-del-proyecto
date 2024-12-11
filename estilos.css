@@ -8,7 +8,6 @@
   }
   
   body {
-    margin-top: 90px; /*para que tenga un margen en la parte superior y asi ocupar el lugar del menuprincipal*/
     color: #fff;
     background-image: url(imagenes/peliculas.jpg); 
   }
@@ -40,6 +39,12 @@
    html{
     scroll-behavior: smooth;
   }
+
+  .espacio {
+    width: 100%; /*ancho*/
+    height: 90px; /*alto*/
+  }
+  
   
   /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
      
