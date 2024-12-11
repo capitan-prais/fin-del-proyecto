@@ -136,10 +136,10 @@
       position: fixed; /*lo hacemos mas manipulable moviendolo donde nosotros queramos top, right, bottom y left*/
       top: 69px; /*subimos o bajamos el menu lateral*/
       left: 100%; /*para pocisionar el menu al lado derecho (fuera de pantalla para que no se vea)*/
-      background: #780206;
-      background: -webkit-linear-gradient(to right, #061161, #780206);
       background: linear-gradient(to right, #061161, #780206);
       flex-direction: column; /*lo ocupamos para que los botones de menu aparescan de forma vertical*/
+      border-radius: 0px 0px 0px 25px;
+      box-shadow: -15px 0 5px rgba(0, 0, 0, 0.2); /* Sombra */
     }
 
   
