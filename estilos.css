@@ -381,7 +381,7 @@
   .carousel-container .carousel .carousel-item img {
     height: 535px;
     mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
-    filter: brightness(1.1) contrast(1.1) saturate(1.1) drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
+    filter: brightness(1.1) contrast(1) saturate(1.5) drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
     /* brightness(1.2) = Incrementa el brillo de la imagen
     contrast(1.2) = Aumenta el contraste de la imagen
     saturate(1.5) = Incrementa la saturación de la imagen
