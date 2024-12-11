@@ -380,6 +380,7 @@
   
   .carousel-item img {
     height: 535px;
+    filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
   }
 
   
@@ -395,7 +396,7 @@
   position: relative;
   mask-image: linear-gradient(black 30%,transparent); /*pone transparente la parte de abajo de la imagen*/
 margin: 0px auto;
-filter: drop-shadow(0 -6mm 4mm hwb(0 97% 3%));
+
 top: 10px;
   }
 
