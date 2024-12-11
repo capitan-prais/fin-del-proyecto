@@ -406,7 +406,7 @@ top: 10px;
     position: relative;
     align-items: center;
     padding: 5px;
-    top: -280px;
+    top: -225px;
     border-radius: 100px 100px;
     background: rgba(0, 0, 0, 0.4);
   }
@@ -429,7 +429,7 @@ top: 10px;
   .btn {
     width: 45px;
     position: absolute;
-    top: 70%;
+    top: 40%;
     background-color: #007bff;
     border: none;
     color: white;

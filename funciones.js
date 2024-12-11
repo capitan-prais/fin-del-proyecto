@@ -187,28 +187,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 // Seleccionar todas las imágenes de todos los carruseles
 const images = document.querySelectorAll('.carousel img');
 const videoContainer = document.getElementById('videoContainer'); // Contenedor del video
 const video = document.getElementById('video'); // Elemento de video
 const videoSource = document.getElementById('videoSource'); // Fuente del video
 const feedback = document.getElementById('feedback'); // Contenedor de feedback
+const titles = document.querySelectorAll('.carousel p'); // Títulos del video
 
 // Añadir evento de clic a cada imagen
 images.forEach(image => {
     image.addEventListener('click', function () {
         const videoFile = image.getAttribute('data-video'); // Obtener la URL del video
         if (videoFile) {
-            videoSource.src = videoFile; // Asignar la fuente del video
-            video.load(); // Cargar el video
-            video.play(); // Reproducir el video
-            videoContainer.style.display = 'block'; // Mostrar el contenedor del video
+            playVideo(videoFile);
         } else {
             alert('No hay video asignado a esta imagen.');
         }
     });
 });
+
+// Añadir evento de clic a cada título
+titles.forEach(title => {
+    title.addEventListener('click', function () {
+        const videoFile = title.getAttribute('data-video'); // Obtener la URL del video
+        if (videoFile) {
+            playVideo(videoFile);
+        } else {
+            alert('No hay video asignado a este título.');
+        }
+    });
+});
+
+// Función para reproducir el video
+function playVideo(videoFile) {
+    videoSource.src = videoFile; // Asignar la fuente del video
+    video.load(); // Cargar el video
+    video.play(); // Reproducir el video
+    videoContainer.style.display = 'block'; // Mostrar el contenedor del video
+}
 
 // Botón para cerrar el video
 const closeVideoButton = document.getElementById('closeVideoButton');
@@ -259,6 +276,7 @@ function handleFeedback(opinion) {
 
     feedback.style.display = 'none'; // Ocultar los botones después de dar feedback
 }
+
 
 
 
