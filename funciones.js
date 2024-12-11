@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             const carouselContainer = carousel.closest('.hero');
 
                             carouselContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            carouselContainer.style.marginTop = '20px'; // Ajuste dinámico de margen
+                            carouselContainer.style.marginTop = '15px'; // Ajuste dinámico de margen
 
                             found = true;
                         }
