@@ -161,11 +161,6 @@
     .menu-i:hover{
       font-size: 22px;
     }
-
-    .menu-i:active {
-      font-size: 40px;
-      /* z-index: -1; */
-    }
   
     ul.menu.active {
       left: 61%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
