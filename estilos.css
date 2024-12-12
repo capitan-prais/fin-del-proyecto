@@ -44,63 +44,43 @@
     width: 100%; /*ancho*/
     height: 90px; /*alto*/
   }
-  
-  
+
   /*aqui empezamos a editarlas el menu superior....//////////////////////////////////*/
      
   .menu {
     width: 70%; /*ancho*/
     height: 100px; /*alto*/
-    align-items: center; /*centra el contenido en el comntenedor*/
-    text-align: center;
     display: flex; /*sirve para poner el contenido uno al lado del otro */
     justify-content: space-around; /*lo ocupamos para dar un espaciado igual a cada cuadrado interno. y hay mas opciones de space- ...*/
+    align-items: center; /*centra el contenido en el comntenedor*/
     list-style-type: none; /* Quita los puntos del principio*/
   }
   
   
   .menu-i {
-    width: 100px; /*ancho*/
-    height: 40px; /*alto*/
+    display: flex;
     font-size: 14px;
-    border-radius: 2em;
-    border-width: 2px;
-    align-items: center;
-    cursor: pointer;
+    border-radius: 30px;
+    border: 2px rgb(219, 218, 218);
     color: rgb(219, 218, 218);
-    border-style: solid;
     background-color: transparent;
-    border-color: rgb(219, 218, 218);
-    line-height: 35px; /*subimos o bajamos la letra*/
-    transition: 0.2s ease;
-    /* font-weight: 500; */
-    /* text-transform: uppercase; */
-    /* letter-spacing: 2px; */
     text-decoration: none; /* Quita el subrayado */
-    /* z-index: -1; */
+    transition: 0.2s ease;
   }
   
   /*cumple estos estilos al pasar el mause por encima o los deja fijo al pasarlos a pantalla de celular*/
   .menu-i:hover {
-    width: 130px; /*ancho*/
-    height: 50px; /*alto*/
     font-size: 20px;
-    text-align: center;
     color: rgb(247, 247, 247);
     background-color: rgb(0, 81, 255);
     border-color: rgb(0, 81, 255);
     text-shadow: 0 0 50px white, 0 0 20px white, 0 0 15px white;
     box-shadow: 0 0 50px rgb(0, 81, 255), 0 0 30px rgb(0, 81, 255),
-      0 0 60px rgb(0, 81, 255), 0 0 120px rgb(0, 81, 255);
-    letter-spacing: 2px;
-    /* z-index: -10; */
+    0 0 60px rgb(0, 81, 255), 0 0 120px rgb(0, 81, 255);
+    padding: 15px;
   }
   
- 
-  
   .menu-btn {
-    font-size: 50px;
-    cursor: pointer;
     display: none; 
   }
   
@@ -109,13 +89,11 @@
   @media screen and (max-width: 1150px) {
     /*aqui modificamos el contenedor del logo del menu*/
     .menu-btn {
-      width: 50px;
-      height: 50px;
-      display: block;
-      margin: 20px auto;
-      /* transition: all 10s ease;  */
+      position: relative;
+      left:-9px;
+      top: 1px;
+      display: flex;
       z-index: 9;
-      
     }
   /*aqui modificamos la imagen del menu*/
     .menu-btn img {
@@ -123,15 +101,17 @@
     }
   
     .menu {
+      display: flex;
       transition: .7s ease; /*tiempo de ocultarse el menu lateral*/
-      width: 40%; /*ancho completo del menu*/
+      width: 45%; /*ancho completo del menu*/
       height: 75%; /*alto completo del menu, no es el alto de cada item del menu*/ 
       padding: 20px;
+      display: flex;
+      flex-direction: column; /*lo ocupamos para que los botones de menu aparescan de forma vertical*/
       position: fixed; /*lo hacemos mas manipulable moviendolo donde nosotros queramos top, right, bottom y left*/
       top: 69px; /*subimos o bajamos el menu lateral*/
       left: 100%; /*para pocisionar el menu al lado derecho (fuera de pantalla para que no se vea)*/
       background: linear-gradient(to right, #061161, #780206);
-      flex-direction: column; /*lo ocupamos para que los botones de menu aparescan de forma vertical*/
       border-radius: 0px 0px 0px 25px;
       box-shadow: -15px 0 5px rgba(0, 0, 0, 0.2); /* Sombra */
     }
@@ -140,23 +120,23 @@
   
     /*separacion entre botnes del menu*/
     .menu-i{
-      /* z-index: -1; */
-      padding: 9px;
+      display: flex;
+      padding: 10px;
       font-size: 22px;
       align-items: center;
       color: rgb(219, 218, 218);
       border-style: solid;
       background-color: transparent;
       border-color: rgb(219, 218, 218);
-      line-height: 70px; /*le damos separacion a los item del menu vertical*/
     }
 
-    .menu-i:hover{
-      font-size: 22px;
+    .menu-i:hover {
+      font-size: 30px;
     }
   
     ul.menu.active {
-      left: 61%; /*lo ocupamos para mover el menu lateral a la izquierda o la derecha al activarse*/
+      display: flex;
+      left: 55%; /*hace aparecer el logo y lo mueve de forma horizontal*/
       transition: .7s ease; /*tiempo de aparecer el menu lateral*/
       /* z-index: -10; */
     }
@@ -418,7 +398,7 @@ top: 20px;
     /* position: relative; */
   }
   
-  
+ 
   .btn {
     width: 45px;
     position: absolute;
@@ -435,8 +415,8 @@ top: 20px;
   
   .btn:active {
     transform: scale(1.1); 
-
     background-color: #26a69a;
+    /* outline: none; */
   }  
   
   .btn-anterior {
@@ -497,7 +477,7 @@ top: 20px;
   .n img:active{
     width: 55px;
     height: 55px;
-    box-shadow: none;
+    filter: none;
     /* background: none; */
   }
   
