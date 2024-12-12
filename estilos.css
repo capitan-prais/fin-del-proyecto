@@ -163,7 +163,7 @@ html {
 
   ul.menu.active {
     display: flex;
-    left: 55%;
+    left: 50%;
     /*hace aparecer el logo y lo mueve de forma horizontal*/
     transition: .7s ease;
     /*tiempo de aparecer el menu lateral*/
