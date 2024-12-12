@@ -76,7 +76,7 @@ html {
 .menu-i {
   display: flex;
   font-size: 14px;
-  border-radius: 30px;
+  border-radius: 100px;
   border: 2px rgb(219, 218, 218);
   color: rgb(219, 218, 218);
   background-color: transparent;
@@ -123,7 +123,7 @@ html {
     display: flex;
     transition: .7s ease;
     /*tiempo de ocultarse el menu lateral*/
-    width: 50%;
+    width: 45%;
     /*ancho completo del menu*/
     height: 75%;
     /*alto completo del menu, no es el alto de cada item del menu*/
@@ -163,7 +163,7 @@ html {
 
   ul.menu.active {
     display: flex;
-    left: 50%;
+    left: 55%;
     /*hace aparecer el logo y lo mueve de forma horizontal*/
     transition: .7s ease;
     /*tiempo de aparecer el menu lateral*/
