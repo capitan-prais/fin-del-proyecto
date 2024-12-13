@@ -159,6 +159,7 @@ html {
 
   .menu-i:hover {
     font-size: 30px;
+    padding: 15px 5px 15px 5px;
   }
 
   ul.menu.active {
